@@ -87,16 +87,15 @@ if __name__ == "__main__":
     carrera = Carrera()
     for y in range(4):
         print("Corredor: ", y+1)
-        time.sleep(random.random())
         tsart_1 = threading.Thread(
             target=func_carrera_1, args=(carrera,))
-        tsart_1.start()
         tsart_2 = threading.Thread(
             target=func_carrera_2, args=(carrera,))
-        tsart_2.start()
         tsart_3 = threading.Thread(
             target=func_carrera_3, args=(carrera,))
-        tsart_3.start()
         tsart_4 = threading.Thread(
             target=func_carrera_4, args=(carrera,))
+        tsart_1.start()
+        tsart_2.start()
+        tsart_3.start()
         tsart_4.start()
