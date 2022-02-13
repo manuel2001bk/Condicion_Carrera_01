@@ -85,8 +85,11 @@ def func_carrera_4(x):
 
 if __name__ == "__main__":
     carrera = Carrera()
+    print("Corredor: 1")
+    print("Corredor: 2")
+    print("Corredor: 3")
+    print("Corredor: 4")
     for y in range(4):
-        print("Corredor: ", y+1)
         tsart_1 = threading.Thread(
             target=func_carrera_1, args=(carrera,))
         tsart_2 = threading.Thread(
