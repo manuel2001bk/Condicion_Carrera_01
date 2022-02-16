@@ -5,14 +5,17 @@ import time
 
 class Carrera ():
     def __init__(self, corredor_1=0, corredor_2=0, corredor_3=0, corredor_4=0):
-        self.locked = threading.Lock()
+        self.locked1 = threading.Lock()
+        self.locked2 = threading.Lock()
+        self.locked3 = threading.Lock()
+        self.locked4 = threading.Lock()
         self.corredor_1 = corredor_1
         self.corredor_2 = corredor_2
         self.corredor_3 = corredor_3
         self.corredor_4 = corredor_4
 
     def correr_1(self):
-        self.locked.acquire()
+        self.locked1.acquire()
         try:
             self.corredor_1 += 1
             if(self.corredor_1 < 20):
@@ -22,10 +25,10 @@ class Carrera ():
                 print("CORREDOR 1 ha terminado")
 
         finally:
-            self.locked.release()
+            self.locked1.release()
 
     def correr_2(self):
-        self.locked.acquire()
+        self.locked2.acquire()
         try:
             self.corredor_2 += 1
             if(self.corredor_2 < 20):
@@ -34,10 +37,10 @@ class Carrera ():
             else:
                 print("CORREDOR 2 ha terminado")
         finally:
-            self.locked.release()
+            self.locked2.release()
 
     def correr_3(self):
-        self.locked.acquire()
+        self.locked3.acquire()
         try:
             self.corredor_3 += 1
             if(self.corredor_3 < 20):
@@ -45,10 +48,10 @@ class Carrera ():
             else:
                 print("CORREDOR 3 ha terminado")
         finally:
-            self.locked.release()
+            self.locked3.release()
 
     def correr_4(self):
-        self.locked.acquire()
+        self.locked4.acquire()
         try:
             self.corredor_4 += 1
             if(self.corredor_4 < 20):
@@ -56,7 +59,7 @@ class Carrera ():
             else:
                 print("CORREDOR 4 ha terminado")
         finally:
-            self.locked.release()
+            self.locked4.release()
 
 
 def func_carrera_1(x):
