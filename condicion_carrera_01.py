@@ -19,6 +19,7 @@ class Carrera ():
         try:
             self.corredor_1 += 1
             if(self.corredor_1 < 20):
+                time.sleep(random.random())
                 print("CORREDOR 1 distancia: ", self.corredor_1)
             else:
 
@@ -32,6 +33,7 @@ class Carrera ():
         try:
             self.corredor_2 += 1
             if(self.corredor_2 < 20):
+                time.sleep(random.random())
                 print("CORREDOR 2 distancia: ", self.corredor_2)
 
             else:
@@ -44,6 +46,7 @@ class Carrera ():
         try:
             self.corredor_3 += 1
             if(self.corredor_3 < 20):
+                time.sleep(random.random())
                 print("CORREDOR 3 distancia: ", self.corredor_3)
             else:
                 print("CORREDOR 3 ha terminado")
@@ -55,6 +58,7 @@ class Carrera ():
         try:
             self.corredor_4 += 1
             if(self.corredor_4 < 20):
+                time.sleep(random.random())
                 print("CORREDOR 4 distancia: ", self.corredor_4)
             else:
                 print("CORREDOR 4 ha terminado")
@@ -64,25 +68,21 @@ class Carrera ():
 
 def func_carrera_1(x):
     for y in range(5):
-        time.sleep(random.random())
         x.correr_1()
 
 
 def func_carrera_2(x):
     for y in range(5):
-        time.sleep(random.random())
         x.correr_2()
 
 
 def func_carrera_3(x):
     for y in range(5):
-        time.sleep(random.random())
         x.correr_3()
 
 
 def func_carrera_4(x):
     for y in range(5):
-        time.sleep(random.random())
         x.correr_4()
 
 
