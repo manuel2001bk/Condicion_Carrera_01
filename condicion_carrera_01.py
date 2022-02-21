@@ -67,22 +67,22 @@ class Carrera ():
 
 
 def func_carrera_1(x):
-    for y in range(5):
+    for y in range(20):
         x.correr_1()
 
 
 def func_carrera_2(x):
-    for y in range(5):
+    for y in range(20):
         x.correr_2()
 
 
 def func_carrera_3(x):
-    for y in range(5):
+    for y in range(20):
         x.correr_3()
 
 
 def func_carrera_4(x):
-    for y in range(5):
+    for y in range(20):
         x.correr_4()
 
 
@@ -92,16 +92,16 @@ if __name__ == "__main__":
     print("Corredor: 2")
     print("Corredor: 3")
     print("Corredor: 4")
-    for y in range(4):
-        tsart_1 = threading.Thread(
-            target=func_carrera_1, args=(carrera,))
-        tsart_2 = threading.Thread(
-            target=func_carrera_2, args=(carrera,))
-        tsart_3 = threading.Thread(
-            target=func_carrera_3, args=(carrera,))
-        tsart_4 = threading.Thread(
-            target=func_carrera_4, args=(carrera,))
-        tsart_1.start()
-        tsart_2.start()
-        tsart_3.start()
-        tsart_4.start()
+    
+    tsart_1 = threading.Thread(
+        target=func_carrera_1, args=(carrera,))
+    tsart_2 = threading.Thread(
+        target=func_carrera_2, args=(carrera,))
+    tsart_3 = threading.Thread(
+        target=func_carrera_3, args=(carrera,))
+    tsart_4 = threading.Thread(
+        target=func_carrera_4, args=(carrera,))
+    tsart_1.start()
+    tsart_2.start()
+    tsart_3.start()
+    tsart_4.start()
